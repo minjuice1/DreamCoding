@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<section>
+			<img src="img/avatar.png" alt="avatar" />
+			<h1 id="brand">Dream Coding</h1>
+			<h3>Don't forget to code your dream</h3>
+		</section>
+		<span>Hello World!</span>
+		<script>
+			const section = document.querySelector("section");
+
+			// h2를 계속 불러서 무엇인가를 실행해야 한다면 createElement를 사용하는 것이 좋음.
+			const h2 = document.createElement("h2");
+			h2.setAttribute("class", "title"); // <h2 class="title"></h2>
+			h2.textContent = "This is a title"; // <h2 class="title">This is a title</h2>
+
+			section.append(h2); // 익스플로러에서 아직 지원이 안됨.
+			section.appendChild(h2); // script 맨 마지막에 추가 됨.
+
+			// h2를 h3 태그 바로 다음에 추가하고 싶다면 h3을 쿼리셀렉터에 추가하고
+			const h3 = document.querySelector("h3");
+			section.insertBefore(h2, h3); //  h2 (추가할 태그) , h3 (h3앞에 추가)
+
+			section.removeChild(h2); // h2 태그를 삭제
+		</script>
+	</body>
+</html>
