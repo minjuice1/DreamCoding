@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=divice-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			body {
+				background-color: black;
+				/* overflow: hidden; */
+			}
+			div {
+				background-color: wheat;
+				width: 200px;
+				height: 200px;
+				border: 2px solid black;
+			}
+			.target {
+				display: inline-block;
+				background-color: tomato;
+				width: 200px;
+				height: 200px;
+				border: 2px solid black;
+			}
+
+			aside {
+				position: fixed;
+				top: 20px;
+				right: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="nemo"></div>
+		<div class="nemo"></div>
+		<div class="nemo"></div>
+		<div class="nemo"></div>
+		<div class="nemo"></div>
+		<div class="nemo"></div>
+		<div class="nemo"></div>
+		<div class="nemo"></div>
+		<div class="nemo"></div>
+		<div class="target"></div>
+		<div class="nemo"></div>
+		<div class="nemo"></div>
+		<div class="nemo"></div>
+		<div class="nemo"></div>
+		<div class="nemo"></div>
+		<aside>
+			<button class="fButton">Scroll by 100px(y)</button>
+			<button class="sButton">Scroll to 100px(y)</button>
+			<button class="tButton">Scroll into special</button>
+		</aside>
+
+		<script>
+			let target = document.querySelector(".target");
+			let fButton = document.querySelector(".fButton");
+			let sButton = document.querySelector(".sButton");
+			let tButton = document.querySelector(".tButton");
+
+			target.addEventListener("click", (event) => {
+				const rect = target.getBoundingClientRect();
+				console.log(rect);
+				console.log(`page: ${event.pageX}, ${event.pageY}`);
+				console.log(`client: ${event.clientX}, ${event.clientY}`);
+			});
+
+			fButton.addEventListener("click", (event) => {
+				window.scrollBy(0, 100);
+			});
+
+			sButton.addEventListener("click", (event) => {
+				window.scrollTo(0, 100);
+			});
+
+			tButton.addEventListener("click", (event) => {
+				target.scrollIntoView();
+			});
+		</script>
+	</body>
+</html>
