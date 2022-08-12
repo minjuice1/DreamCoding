@@ -1,0 +1,8 @@
+.listBox {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.listBox.list {
+	width: 100%;
+}

@@ -1,0 +1,59 @@
+.video {
+	border: 1px solid lightgray;
+	display: flex;
+	box-sizing: border-box;
+	width: 50%;
+	height: 120px;
+	cursor: pointer;
+	align-items: center;
+	padding: 5px;
+	transition: transform 100ms ease-in;
+}
+
+@media (max-width: 1065px) {
+	.video.list {
+		width: 50%;
+		max-width: 500px;
+	}
+}
+
+@media (min-width: 1065px) {
+	.video.list {
+		width: 100%;
+		max-width: 500px;
+	}
+}
+
+.video.grid {
+	width: 50%;
+}
+
+.video:hover {
+	transform: scale(1.02);
+}
+
+.thumbnail {
+	height: 95%;
+}
+
+.titleBox {
+	padding: 0 10px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.title {
+	color: black;
+	margin: 0;
+	padding: 0;
+	font-size: 13px;
+	font-weight: bold;
+}
+
+.subtitle {
+	color: grey;
+	margin: 5px 0 0 0;
+	padding: 0;
+	font-size: 13px;
+}
