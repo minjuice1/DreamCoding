@@ -1,0 +1,19 @@
+.video {
+	display: flex;
+	flex-direction: column;
+	padding: 10px;
+}
+
+.titleBox {
+	height: 50%;
+	width: 100%;
+}
+
+.title {
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.description {
+	color: gray;
+}
